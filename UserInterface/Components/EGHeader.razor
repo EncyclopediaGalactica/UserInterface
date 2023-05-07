@@ -1,0 +1,6 @@
+@using Microsoft.Fast.Components.FluentUI;
+<FluentCombobox
+    Placeholder="Select module"
+    Items="Modules"
+    OptionText="@(s => s.Text)"
+    OptionValue="@(s => s.Value)"/>
