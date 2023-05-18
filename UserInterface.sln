@@ -1,13 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserInterface", "UserInterface\UserInterface.csproj", "{581264B5-A92A-4F01-B4D8-67B92F4083AB}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{B84228D3-A535-439D-93AE-DA7E30DAC07B}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorApp1", "BlazorApp1\BlazorApp1.csproj", "{6662A33C-412F-4765-A97B-BAFF1F1CB442}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserInterface", "UserInterface\UserInterface.csproj", "{D9CA0C76-A983-4DBF-AE41-FA2933D8BB50}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,13 +13,9 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{581264B5-A92A-4F01-B4D8-67B92F4083AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{581264B5-A92A-4F01-B4D8-67B92F4083AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{581264B5-A92A-4F01-B4D8-67B92F4083AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{581264B5-A92A-4F01-B4D8-67B92F4083AB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6662A33C-412F-4765-A97B-BAFF1F1CB442}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6662A33C-412F-4765-A97B-BAFF1F1CB442}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6662A33C-412F-4765-A97B-BAFF1F1CB442}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6662A33C-412F-4765-A97B-BAFF1F1CB442}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9CA0C76-A983-4DBF-AE41-FA2933D8BB50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9CA0C76-A983-4DBF-AE41-FA2933D8BB50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9CA0C76-A983-4DBF-AE41-FA2933D8BB50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9CA0C76-A983-4DBF-AE41-FA2933D8BB50}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
