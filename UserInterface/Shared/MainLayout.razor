@@ -4,17 +4,18 @@
 
 <PageTitle>UserInterface</PageTitle>
 
-<FluentCard>
-    <FluentCard>
-        <EGNavMenu/>
-    </FluentCard>
-    <FluentCard>
+<FluentCard Style="width: 100%; height: 100%; float: none;">
+    <FluentCard Style="width: 100%; height: 15%;">
         <EGHeader/>
     </FluentCard>
-    <FluentCard>
+    <FluentCard Style="width: 15%; float: left;">
+        <EGLeftHandMenu/>
+    </FluentCard>
+    <FluentCard Style="width: 85%; float: right;">
         MainContent
         @Body
     </FluentCard>
+    <FluentCard Style="width: 100%; height: 10%;">Bottom bar</FluentCard>
 </FluentCard>
 
 @* <div class="page"> *@

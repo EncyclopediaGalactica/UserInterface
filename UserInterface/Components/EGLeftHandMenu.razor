@@ -1,0 +1,8 @@
+@using Microsoft.Fast.Components.FluentUI
+<h3>EGNavMenu</h3>
+<FluentMenu>
+    @foreach (string menuName in Menus)
+    {
+        <FluentMenu>@menuName</FluentMenu>
+    }
+</FluentMenu>

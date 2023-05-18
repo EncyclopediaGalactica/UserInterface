@@ -1,8 +1,7 @@
-using Fluxor;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
+using BlazorApp1.Data;
 using Microsoft.Fast.Components.FluentUI;
-using UserInterface.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,17 +9,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddSingleton<WeatherForecastService>();
-builder.Services.AddFluentUIComponents(o =>
-{
-    o.HostingModel = BlazorHostingModel.Server;
-});
-builder.Services.AddHttpClient();
-builder.Services.AddFluxor(o =>
-{
-    o.ScanAssemblies(typeof(Program).Assembly);
-});
+builder.Services.AddFluentUIComponents(o => o.HostingModel = BlazorHostingModel.Server);
 
-WebApplication app = builder.Build();
+var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())

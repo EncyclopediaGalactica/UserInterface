@@ -1,6 +1,17 @@
 @using Microsoft.Fast.Components.FluentUI;
-<FluentCombobox
-    Placeholder="Select module"
-    Items="Modules"
-    OptionText="@(s => s.Text)"
-    OptionValue="@(s => s.Value)"/>
+<div style="width: 100%; height: 100%; float: none;">
+    <div style="width: 10%; height: 100%; float: right">spacer</div>
+    <div style="width: 20%; height: 100%; float: right;">
+        <FluentCombobox
+            Placeholder="Select module"
+            Items="@Modules"
+            OptionText="@(option => option.Text)"
+            OptionValue="@(option => option.Value)"
+            OptionSelected="@(option => option.Selected)"
+            @bind-SelectedOption="@selectedOption"
+            @bind-Value="@selectedValue"/>
+    </div>
+    <div>
+        <h4>Encyclopedia Galactica</h4>
+    </div>
+</div>
