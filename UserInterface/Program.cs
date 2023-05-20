@@ -2,24 +2,25 @@ using Fluxor;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.Fast.Components.FluentUI;
+using UserInterface.Components;
 using UserInterface.Data;
+using UserInterface.Services;
 
-var builder = WebApplication.CreateBuilder(args);
+WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddSingleton<WeatherForecastService>();
-builder.Services.AddFluentUIComponents(o =>
-{
-    o.HostingModel = BlazorHostingModel.Server;
-});
-builder.Services.AddHttpClient();
+builder.Services.AddFluentUIComponents(o => o.HostingModel = BlazorHostingModel.Server);
 builder.Services.AddFluxor(o =>
 {
     o.ScanAssemblies(typeof(Program).Assembly);
+    o.UseReduxDevTools();
 });
-
+builder.Services.AddScoped<EGModuleSelector>();
+builder.Services.AddScoped<EGNavigation>();
+builder.Services.AddScoped<ICoreService, CoreService>();
 WebApplication app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -38,5 +39,8 @@ app.UseRouting();
 
 app.MapBlazorHub();
 app.MapFallbackToPage("/_Host");
+// IServiceProvider serviceProvider = builder.Services.BuildServiceProvider();
+// serviceProvider.GetRequiredService<EGModuleSelector>();
+// serviceProvider.GetRequiredService<EGNavigation>();
 
 app.Run();

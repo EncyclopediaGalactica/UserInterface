@@ -1,35 +1,29 @@
 ﻿@inherits LayoutComponentBase
-@using Microsoft.Fast.Components.FluentUI
-@using UserInterface.Components
-
 <PageTitle>UserInterface</PageTitle>
 
-<FluentCard Style="width: 100%; height: 100%; float: none;">
-    <FluentCard Style="width: 100%; height: 15%;">
-        <EGHeader/>
-    </FluentCard>
-    <FluentCard Style="width: 15%; float: left;">
-        <EGLeftHandMenu/>
-    </FluentCard>
-    <FluentCard Style="width: 85%; float: right;">
-        MainContent
-        @Body
-    </FluentCard>
-    <FluentCard Style="width: 100%; height: 10%;">Bottom bar</FluentCard>
-</FluentCard>
+<div class="container-fluid">
+    <div class="navbar navbar-brand col-12 row" style="height: 15%; background-color: darkblue;">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-11"></div>
+                <div class="col-1">
+                    <EGModuleSelector/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 row" style="background-color: #0d6efd">
+        <div class="nav col-1 float-start">
+            <EGNavigation/>
+        </div>
+        <div class="col-11 float-start">
+            <main>
+                @Body
+            </main>
+        </div>
+    </div>
+    <div class="col-12 row nav" style="background-color: #0f5132; height: 10%;">
+        footer
+    </div>
 
-@* <div class="page"> *@
-@*     <div class="sidebar"> *@
-@*         <NavMenu/> *@
-@*     </div> *@
-@* *@
-@*     <main> *@
-@*         <div class="top-row px-4"> *@
-@*             <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a> *@
-@*         </div> *@
-@* *@
-@*         <article class="content px-4"> *@
-@*             @Body *@
-@*         </article> *@
-@*     </main> *@
-@* </div> *@
+</div>

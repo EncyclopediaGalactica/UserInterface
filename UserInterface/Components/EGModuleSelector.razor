@@ -1,6 +1,9 @@
+@inherits Fluxor.Blazor.Web.Components.FluxorComponent
 @using Microsoft.Fast.Components.FluentUI
 <FluentCombobox
     Items="Menus"
     OptionText="@(o => o.Text)"
-    OptionValue="@(o => o.Value)">
+    OptionValue="@(o => o.Value)"
+    @bind-SelectedOption="@selectedModule"
+    @onchange="@ModuleSelectionAction">
 </FluentCombobox>

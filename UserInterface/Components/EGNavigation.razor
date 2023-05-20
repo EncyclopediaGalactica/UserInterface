@@ -1,7 +1,8 @@
+@inherits Fluxor.Blazor.Web.Components.FluxorComponent
+@using UserInterface.Services
 <FluentMenu>
-    <FluentMenuItem>Menu item 1</FluentMenuItem>
-    <FluentMenuItem>Menu item 2</FluentMenuItem>
-    <FluentMenuItem>Menu item 3</FluentMenuItem>
-    <FluentMenuItem>Menu item 4</FluentMenuItem>
-    <FluentMenuItem>Menu item 5</FluentMenuItem>
+    @foreach (Functionality functionality in Functionalities)
+    {
+        <FluentMenuItem>@functionality.Name</FluentMenuItem>
+    }
 </FluentMenu>
