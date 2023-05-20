@@ -1,0 +1,19 @@
+@inherits Fluxor.Blazor.Web.Components.FluxorComponent
+
+@if (Module is not null)
+{
+    @if (Module.Name == "Document")
+    {
+        <EGDocumentMain></EGDocumentMain>
+    }
+
+    @if (Module.Name == "Health")
+    {
+        <EGHealthMain></EGHealthMain>
+    }
+
+    @if (Module.Name == "Finance")
+    {
+        <EGFinanceMain></EGFinanceMain>
+    }
+}
